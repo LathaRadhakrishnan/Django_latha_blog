@@ -1,0 +1,20 @@
+{% load static %}
+
+
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock %}</title>
+            {% block css_style %}{% endblock %}
+            <link rel="stylesheet"href="{% static "app.css" %}"
+        </head>
+        <body> 
+            <header id="main-navigation">
+                <h1><a href="{% url "starting"%}">LATHA'S Blog</a></h1>
+                <nav>
+                  <a href=" {% url "allpost_page"%} "id="allpost">All Posts</a>
+                </nav>
+              </header>
+            {% block content %}{% endblock %}
+        </body>
+        </html>
